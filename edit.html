@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Edit Activity</h2>
+  <form method="POST">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="{{ activity[1] }}" required><br><br>
+
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required>{{ activity[2] }}</textarea><br><br>
+
+    <button type="submit">Update</button>
+  </form>
+  <br>
+  <a href="{{ url_for('index') }}">Back to list</a>
+{% endblock %}
